@@ -1,21 +1,43 @@
-/* RESET BÁSICO */
-body {
-    font-family: Arial, sans-serif;
+/* RESET */
+* {
     margin: 0;
-    background: #f4f4f4;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #eef2f3;
+    color: #222;
+    line-height: 1.6;
 }
 
 /* HEADER */
 header {
-    background: #2c7a7b;
+    background: linear-gradient(135deg, #1b5e20, #2e7d32);
     color: white;
-    padding: 25px;
+    padding: 30px 20px;
     text-align: center;
+}
+
+/* BOTONES */
+.language-buttons button {
+    background: #ffcc00;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.language-buttons button:hover {
+    background: #ffb300;
 }
 
 /* NAV */
 nav {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 nav a {
@@ -23,16 +45,17 @@ nav a {
     margin: 10px;
     text-decoration: none;
     font-weight: bold;
+    padding-bottom: 5px;
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav a.active {
+    border-bottom: 3px solid yellow;
 }
 
-/* TÍTULOS */
+/* TITULOS */
 h2, h3 {
     text-align: center;
-    margin-top: 30px;
+    margin: 30px 0 10px;
 }
 
 /* GRID */
@@ -47,13 +70,22 @@ h2, h3 {
 .card {
     background: white;
     padding: 15px;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(30px);
 }
 
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* HOVER */
 .card:hover {
     transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 
 /* IMÁGENES */
@@ -62,40 +94,28 @@ img {
     border-radius: 10px;
 }
 
-/* BOTONES IDIOMA */
-.language-buttons button {
-    margin: 5px;
-    padding: 8px 12px;
-    border: none;
-    background: white;
-    color: #2c7a7b;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.language-buttons button:hover {
-    background: #ddd;
-}
-
-/* OCULTAR INGLÉS POR DEFECTO */
-.lang-en {
-    display: none;
+/* TEXTO */
+p {
+    margin-top: 10px;
 }
 
 /* FOOTER */
 footer {
-    background: #2c7a7b;
+    background: #1b5e20;
     color: white;
     text-align: center;
-    padding: 15px;
-    margin-top: 30px;
+    padding: 20px;
 }
 
 /* MAPA */
 iframe {
-    border: none;
-    margin-top: 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+/* OCULTAR INGLÉS */
+.lang-en {
+    display: none;
 }
 
 /* RESPONSIVE */
