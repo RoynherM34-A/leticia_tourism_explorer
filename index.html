@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title id="page-title">Leticia Tourism Explorer</title>
+<title>Leticia Tourism Explorer</title>
+
+<!-- SEO -->
+<meta name="description"
+content="Explora Leticia Amazonas: naturaleza, cultura, gastronomía y turismo fronterizo en el corazón del Amazonas colombiano.">
+
+<meta name="keywords"
+content="Leticia, Amazonas, turismo, Colombia, Amazonía, ecoturismo">
+
+<meta name="author"
+content="Roynher Alberto Montero Muñoz">
+
+<!-- PWA -->
+<meta name="theme-color" content="#72d957">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
 <link rel="stylesheet" href="styles.css">
 
@@ -13,619 +38,710 @@
 
 <body>
 
-<header>
+<!-- ================= HEADER ================= -->
+<header class="header">
+
+<div class="logo">
+
+<div class="logo-circle"></div>
 
 <h1>
-<span class="lang-es">Explorador Turístico de Leticia</span>
-<span class="lang-en">Leticia Tourism Explorer</span>
+Leticia Tourism Explorer
 </h1>
 
-<div class="language-buttons">
-<button onclick="setLanguage('es')">Español</button>
-<button onclick="setLanguage('en')">English</button>
 </div>
 
-<p class="lang-es">
-Explora las mejores experiencias turísticas en Leticia, Amazonas, un destino único lleno de biodiversidad,
-cultura y experiencias inolvidables en el corazón de la selva amazónica.
-Este portal te permitirá descubrir la riqueza natural, cultural y gastronómica de esta región,
-ofreciendo información detallada para viajeros que buscan aventura, conocimiento y conexión con la naturaleza.
-</p>
+<nav class="navbar">
 
-<p class="lang-en">
-Explore the best tourist experiences in Leticia, Amazonas, a unique destination full of biodiversity,
-culture, and unforgettable experiences in the heart of the Amazon rainforest.
-This platform allows travelers to discover natural, cultural, and gastronomic richness,
-providing detailed information for adventure and eco-tourism lovers.
-</p>
+<a href="#hero" data-i18n="inicio">
+Inicio
+</a>
 
-<nav>
-<a href="#nature"><span class="lang-es">Naturaleza</span><span class="lang-en">Nature</span></a>
-<a href="#culture"><span class="lang-es">Cultura</span><span class="lang-en">Culture</span></a>
-<a href="#gastronomy"><span class="lang-es">Gastronomía</span><span class="lang-en">Gastronomy</span></a>
-<a href="#events"><span class="lang-es">Eventos</span><span class="lang-en">Events</span></a>
-<a href="#map"><span class="lang-es">Mapa</span><span class="lang-en">Map</span></a>
+<a href="#nature" data-i18n="naturaleza">
+Naturaleza
+</a>
+
+<a href="#culture" data-i18n="cultura">
+Cultura
+</a>
+
+<a href="#gastronomy" data-i18n="gastronomia">
+Gastronomía
+</a>
+
+<a href="#events" data-i18n="eventos">
+Eventos
+</a>
+
+<a href="#border-tourism" data-i18n="frontera">
+Frontera
+</a>
+
+<a href="#map" data-i18n="mapa">
+Mapa
+</a>
+
 </nav>
+
+<div class="header-right">
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Buscar...">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+</div>
+
+<select id="languageSwitcher">
+
+<option value="es">ES</option>
+<option value="en">EN</option>
+<option value="pt">PT</option>
+<option value="fr">FR</option>
+<option value="de">DE</option>
+
+</select>
+
+</div>
 
 </header>
 
-<!-- NATURALEZA -->
+<!-- ================= HERO ================= -->
+<section class="hero" id="hero">
 
-<section id="nature">
+<div class="overlay"></div>
 
-<h2><span class="lang-es">Naturaleza y Ecoturismo</span><span class="lang-en">Nature & Ecotourism</span></h2>
+<div class="hero-content">
 
-<div class="grid">
+<h2 data-i18n="hero_title">
 
-<div class="card">
-<img src="images/Amacayacu_National_Park.jpg" alt="Parque Nacional Natural Amacayacu">
-<h4>Amacayacu National Park</h4>
+Descubre Leticia y la
+<span class="amazon-green">
+Amazonía
+</span>
 
-<p class="lang-es">
-El Parque Nacional Natural Amacayacu es uno de los destinos más importantes del Amazonas colombiano.
-Este parque protege una gran diversidad de flora y fauna, incluyendo especies en peligro de extinción.
-Los visitantes pueden realizar caminatas ecológicas guiadas, avistamiento de aves,
-y recorridos por la selva profunda que permiten comprender la importancia de la conservación ambiental.
-Además, es un espacio ideal para el turismo sostenible y la investigación científica.
+</h2>
+
+<p data-i18n="hero_text">
+
+Explora las mejores experiencias turísticas en Leticia, Amazonas.
+
 </p>
 
-<p class="lang-en">
-Amacayacu National Park is one of the most important destinations in the Colombian Amazon.
-It protects a vast biodiversity, including endangered species.
-Visitors can enjoy guided jungle hikes, bird watching,
-and deep rainforest exploration while learning about environmental conservation.
-It is also ideal for sustainable tourism and scientific research.
-</p>
-</div>
+<button class="hero-btn" data-i18n="hero_button">
 
-<div class="card">
-<img src="images/Lago_Tarapoto.jpg" alt="Parque Nacional Natural Amacayacu">
-<h4>Lago Tarapoto</h4>
+Explorar ahora
 
-<p class="lang-es">
-El Lago Tarapoto es un ecosistema natural reconocido por la presencia de delfines rosados,
-una de las especies más emblemáticas del Amazonas.
-Este lugar ofrece recorridos en canoa, observación de fauna acuática
-y experiencias únicas en contacto con la naturaleza.
-Es un destino ideal para quienes buscan tranquilidad, paisajes impresionantes
-y una conexión directa con el entorno natural.
-</p>
-
-<p class="lang-en">
-Tarapoto Lake is a natural ecosystem known for pink dolphins,
-one of the most iconic species of the Amazon.
-It offers canoe tours, wildlife observation,
-and unique experiences in close contact with nature.
-It is perfect for travelers seeking peace, scenic landscapes,
-and a deep connection with the environment.
-</p>
-</div>
-
-<div class="card">
-<img src="images/Isla _de _los _Micos.pjg.webp" alt="Isla de los Micos en el Amazonas">
-<h4>Monkey Island</h4>
-
-<p class="lang-es">
-La Isla de los Micos es un atractivo turístico donde los visitantes pueden interactuar con diferentes especies de monos
-en un entorno controlado pero natural.
-Este lugar permite aprender sobre el comportamiento de estos animales
-y la importancia de proteger su hábitat.
-Es una experiencia educativa, divertida y única para todas las edades.
-</p>
-
-<p class="lang-en">
-Monkey Island is a tourist attraction where visitors can interact with different monkey species
-in a natural environment.
-It allows people to learn about their behavior
-and the importance of protecting their habitat.
-It is an educational, fun, and unique experience for all ages.
-</p>
-</div>
+</button>
 
 </div>
 
-<h3><span class="lang-es">Experiencias con Fauna</span><span class="lang-en">Wildlife Experiences</span></h3>
+<!-- ================= MINI CARDS ================= -->
+<div class="hero-cards">
 
-<div class="grid">
+<div class="mini-card" data-target="#nature">
 
-<div class="card">
-<img src="images/Ornitología.jpg" alt="Observación de aves en el Amazonas">
-<h4>Birdwatching</h4>
+<img
+src="https://images.unsplash.com/photo-1544551763-46a013bb70d5"
+alt="Naturaleza Amazónica"
+loading="lazy">
 
-<p class="lang-es">
-La observación de aves es una de las actividades más destacadas en Leticia,
-ya que la región cuenta con una enorme diversidad de especies.
-Los tours guiados permiten identificar aves exóticas,
-aprender sobre sus hábitats y comprender su importancia ecológica.
-Es una experiencia ideal para amantes de la naturaleza y la fotografía.
-</p>
+<div class="mini-card-content">
 
-<p class="lang-en">
-Birdwatching is one of the most popular activities in Leticia,
-as the region hosts a vast diversity of bird species.
-Guided tours help visitors identify exotic birds,
-learn about their habitats, and understand their ecological importance.
-It is perfect for nature lovers and photographers.
+<h4 data-i18n="mini_fauna">
+Naturaleza
+</h4>
+
+<span data-i18n="explore">
+Explorar →
+</span>
+
+</div>
+</div>
+
+<div class="mini-card" data-target="#culture">
+
+<img
+src="https://images.unsplash.com/photo-1516426122078-c23e76319801"
+alt="Cultura Amazónica"
+loading="lazy">
+
+<div class="mini-card-content">
+
+<h4 data-i18n="mini_cultura">
+Cultura
+</h4>
+
+<span data-i18n="explore">
+Explorar →
+</span>
+
+</div>
+</div>
+
+<div class="mini-card" data-target="#gastronomy">
+
+<img
+src="https://images.unsplash.com/photo-1544025162-d76694265947"
+alt="Gastronomía Amazónica"
+loading="lazy">
+
+<div class="mini-card-content">
+
+<h4 data-i18n="mini_gastronomia">
+Gastronomía
+</h4>
+
+<span data-i18n="explore">
+Explorar →
+</span>
+
+</div>
+</div>
+
+<div class="mini-card" data-target="#events">
+
+<img
+src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+alt="Eventos Amazónicos"
+loading="lazy">
+
+<div class="mini-card-content">
+
+<h4 data-i18n="mini_eventos">
+Eventos
+</h4>
+
+<span data-i18n="explore">
+Explorar →
+</span>
+
+</div>
+</div>
+
+<div class="mini-card" data-target="#border-tourism">
+
+<img
+src="https://images.unsplash.com/photo-1473773508845-188df298d2d1"
+alt="Turismo Fronterizo"
+loading="lazy">
+
+<div class="mini-card-content">
+
+<h4 data-i18n="mini_frontera">
+Frontera
+</h4>
+
+<span data-i18n="explore">
+Explorar →
+</span>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- ================= NATURALEZA ================= -->
+<section class="section" id="nature">
+
+<div class="section-header">
+<h2 data-i18n="section_nature">
+Naturaleza y Ecoturismo
+</h2>
+
+<p data-i18n="section_nature_text">
+Descubre la biodiversidad del Amazonas colombiano.
 </p>
 </div>
 
-<div class="card">
-<img src="images/Safari_nocturno_en_la_jungla.jpg" alt="Safari nocturno en la selva amazónica">
-<h4>Jungle Night Safari</h4>
+<div class="cards-grid">
 
-<p class="lang-es">
-El safari nocturno en la selva ofrece una experiencia única,
-donde los visitantes pueden explorar la vida nocturna del Amazonas.
-Durante el recorrido se pueden observar insectos, anfibios,
-y otros animales que solo salen de noche.
-Es una actividad emocionante y educativa.
+<div class="content-card">
+<img src="images/Amacayacu_National_Park.jpg">
+<div class="content-body">
+<h3 data-i18n="amacayacu_title">
+Parque Nacional Amacayacu
+</h3>
+
+<p data-i18n="amacayacu_text">
+Área protegida con gran biodiversidad y selva amazónica intacta.
 </p>
 
-<p class="lang-en">
-The jungle night safari offers a unique experience,
-where visitors explore Amazon nightlife.
-You can observe insects, amphibians,
-and nocturnal animals.
-It is an exciting and educational activity.
+</div>
+</div>
+
+<div class="content-card">
+<img src="images/Lago_Tarapoto.jpg">
+<div class="content-body">
+<h3 data-i18n="tarapoto_title">
+Lago Tarapoto
+</h3>
+
+<p data-i18n="tarapoto_text">
+Hogar de delfines rosados y ecosistemas acuáticos únicos.
+</p>
+
+</div>
+</div>
+
+<div class="content-card">
+<img src="images/Isla _de _los _Micos.pjg.webp">
+<div class="content-body">
+<h3 data-i18n="micos_title">
+Isla de los Micos
+</h3>
+
+<p data-i18n="micos_text">
+Refugio natural donde conviven múltiples especies de primates.
+</p>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- ================= CULTURA ================= -->
+<section class="section" id="culture">
+
+<div class="section-header">
+<h2 data-i18n="culture_title"> 
+Cultura Amazónica
+</h2>
+
+<p data-i18n="culture_text">
+Conoce comunidades indígenas y tradiciones ancestrales.
+</p>
+
+</div>
+
+<div class="cards-grid">
+
+<div class="content-card">
+<img src="images/Comunidad_Tikuna.jpg">
+<div class="content-body">
+<h3 data-i18n="tikuna_title">
+Tikuna Community
+</h3>
+
+
+<p data-i18n="tikuna_text">
+Los Tikuna preservan idioma, rituales y conexión espiritual con la selva amazónica.
+</p>
+
+</div>
+</div>
+
+<div class="content-card">
+<img src="images/Cultura_Yagua.jpg">
+<div class="content-body">
+<h3 data-i18n="yagua_title">
+Cultura Yagua
+</h3>
+
+<p data-i18n="yagua_text">
+Tradiciones de caza, pesca y conocimiento profundo de la selva.
+</p>
+
+</div>
+</div>
+
+<div class="content-card">
+<img src="images/Tradiciones_Huitoto.jpg">
+<div class="content-body">
+<h3 data-i18n="huitoto_title">
+Huitoto Traditions
+</h3>
+
+<p data-i18n="huitoto_text">
+Rituales ancestrales y cosmovisión basada en el equilibrio natural.
+</p>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- ================= HISTORIA Y MUSEOS ================= -->
+<section class="section">
+
+<div class="section-header">
+<h2 data-i18n="history_title">
+Historia y Cultura Urbana
+</h2>
+
+<p data-i18n="history_text">
+Descubre la historia, cultura y lugares emblemáticos de Leticia.
+</p>
+
+</div>
+
+<div class="cards-grid">
+
+<div class="content-card">
+<img src="images/Parque_Santander.jpg">
+<div class="content-body">
+<h3 data-i18n="history1_title">
+Santander Park
+</h3>
+
+<p data-i18n="history1_text">
+Famoso por el espectáculo de loros al atardecer.
+</p>
+
+</div>
+</div>
+
+<div class="content-card">
+<img src="images/Museo_Etnográfico.jpg">
+<div class="content-body">
+<h3 data-i18n="history2_title">
+Ethnographic Museum
+</h3>
+
+<p data-i18n="history2_text"
+Historia cultural del Amazonas y sus pueblos indígenas.
+</p>
+
+</div>
+</div>
+
+<div class="content-card">
+<img src="images/Leticia_Malecón.jpg">
+<div class="content-body">
+<h3 data-i18n="history3_title">
+Leticia Malecón
+</h3>
+
+<p data-i18n="history3_text">
+Paseo turístico junto al río Amazonas.
+</p>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- ================= GASTRONOMÍA ================= -->
+<section class="section" id="gastronomy">
+
+<div class="section-header">
+<h2 data-i18n="gastronomy_title">
+Gastronomía Amazónica
+</h2>
+
+</div>
+
+<div class="cards-grid">
+
+<div class="content-card">
+<img src="images/Pescado_Moquiado.jpg">
+<div class="content-body">
+<h3 data-i18n="fish_title">
+Pescado Moqueado
+</h3>
+
+<p data-i18n="fish_text">
+Preparación tradicional ahumada con sabor amazónico único.
+</p>
+
+</div>
+</div>
+
+<div class="content-card">
+<img src="images/Casabe.jpg">
+<div class="content-body">
+<h3 data-i18n="casabe_title">
+Casabe
+</h3>
+
+<p data-i18n="casabe_text">
+Pan de yuca tradicional de las comunidades indígenas.
+</p>
+
+</div>
+</div>
+
+<div class="content-card">
+<img src="images/Amazon_Fruits.jpg.webp">
+<div class="content-body">
+<h3 data-i18n="fruits_title">
+Amazon Fruits
+</h3>
+
+<p data-i18n="fruits_text">
+Frutas exóticas como copoazú, arazá y camu camu.
+</p>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- RESTAURANTES -->
+<section class="section">
+
+<div class="section-header">
+
+<h2 data-i18n="restaurants_title">
+Restaurantes Locales
+</h2>
+
+<p data-i18n="restaurants_text">
+Disfruta la mejor gastronomía amazónica en restaurantes tradicionales y modernos.
+</p>
+
+</div>
+
+<div class="cards-grid">
+
+<div class="content-card">
+<img src="images/Tierras_Amazónicas.jpg">
+<div class="content-body">
+<h3 data-i18n="restaurant1_title">
+Tierras Amazónicas
+</h3>
+
+<p data-i18n="restaurant1_text">
+Cocina tradicional amazónica con ingredientes frescos.
+</p>
+
+</div>
+</div>
+
+<div class="content-card">
+<img src="images/El_Cielo_Amazónico.jpg">
+<div class="content-body">
+<h3 data-i18n="restaurant2_title">
+El Cielo Amazónico
+</h3>
+
+<p data-i18n="restaurant2_text">
+Gastronomía moderna inspirada en la tradición local.
+</p>
+
+</div>
+</div>
+
+<div class="content-card">
+<img src="images/Restaurante_con_vistas_al_río.jpg">
+<div class="content-body">
+<h3 data-i18n="restaurant3_title">
+River View Dining
+</h3>
+
+<p data-i18n="restaurant3_text">
+Experiencia gastronómica con vista al río Amazonas.
+</p>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- ================= EVENTOS ================= -->
+<section class="section" id="events">
+
+<div class="section-header">
+<h2 data-i18n="events_title">
+Eventos Amazónicos
+</h2>
+
+</div>
+
+<div class="cards-grid">
+
+<div class="content-card">
+<img src="images/Festival_de_Integración_de_Amazon.jpg">
+<div class="content-body">
+<h3 data-i18n="festival_title">Festival A mazónico
+</h3>
+
+<p data-i18n="festival_text">
+Festival cultural con música, danza y gastronomía amazónica.
+</p>
+
+</div>
+</div>
+
+<div class="content-card">
+<img src="images/Festival_de_Danza_Indígena.jpg">
+<div class="content-body">
+<h3 data-i18n="dance_title">
+Festival Indígena
+</h3>
+
+<p data-i18n="dance_text">
+Celebración de danzas y tradiciones indígenas.
+</p>
+
+</div>
+</div>
+
+<div class="content-card">
+<img src="images/Artesania.jpg">
+<div class="content-body">
+<h3 data-i18n="crafts_title">
+Feria Artesanal
+</h3>
+
+<p data-i18n="crafts_text">
+Exhibición de artesanías hechas a mano.
+</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- ================= TURISMO FRONTERIZO ================= -->
+<section class="section" id="border-tourism">
+
+<div class="section-header">
+<h2 data-i18n="border_title">
+Turismo Fronterizo
+</h2>
+
+<p data-i18n="border_text">
+Explora la triple frontera entre Colombia, Brasil y Perú.
 </p>
 </div>
 
-<div class="card">
-<img src="images/Excursiones_por_el_río_Amazonas.jpg" alt="Recorrido por el río Amazonas en lancha">
-<h4>Amazon River Tours</h4>
+<div class="cards-grid">
 
-<p class="lang-es">
-Los recorridos por el río Amazonas permiten descubrir paisajes impresionantes,
-comunidades locales y fauna acuática.
-Los turistas pueden navegar en lancha,
-aprender sobre la vida en el río
-y disfrutar de atardeceres únicos.
+<div class="content-card">
+<img src="images/Puerto_Nariño.jpg">
+<div class="content-body">
+<h3 data-i18n="nariño_title">
+Puerto Nariño
+</h3>
+
+<p data-i18n="nariño_text">
+Destino ecológico sin vehículos y lleno de biodiversidad.
 </p>
 
-<p class="lang-en">
-Amazon River tours allow visitors to discover stunning landscapes,
-local communities, and aquatic wildlife.
-Travelers can navigate by boat,
-learn about river life,
-and enjoy breathtaking sunsets.
+</div>
+</div>
+
+<div class="content-card">
+<img src="images/Tabatinga-Brasil.jpg">
+<div class="content-body">
+<h3 data-i18n="tabatinga_title">
+Tabatinga Brazil
+</h3>
+
+<p data-i18n="tabatinga_text">
+Experiencia cultural entre Colombia y Brasil.
 </p>
+
+</div>
+</div>
+
+<div class="content-card">
+<img src="images/Ruta_fronteriza_de_Perú.jpg">
+<div class="content-body">
+<h3 data-i18n="peru_title">
+Ruta Fronteriza Perú
+</h3>
+
+<p data-i18n="peru_text">
+Recorrido fluvial por la Amazonía entre países.
+</p>
+
+</div>
 </div>
 
 </div>
 
 </section>
 
-<!-- CULTURA -->
+<!-- ================= MAP ================= -->
+<section class="section" id="map">
 
-<section id="culture">
+<div class="section-header">
 
-<h2><span class="lang-es">Cultura</span><span class="lang-en">Culture</span></h2>
-
-<div class="grid">
-
-<div class="card">
-<img src="images/Comunidad_Tikuna.jpg" alt="Comunidad indígena Tikuna">
-<h4>Tikuna Community</h4>
-
-<p class="lang-es">
-Las comunidades Tikuna representan una de las culturas indígenas más importantes del Amazonas.
-Sus habitantes mantienen vivas sus tradiciones, idioma y prácticas ancestrales.
-Los visitantes pueden conocer sus rituales, artesanías
-y su relación armónica con la naturaleza.
-Es una experiencia enriquecedora que promueve el respeto por la diversidad cultural.
-</p>
-
-<p class="lang-en">
-Tikuna communities represent one of the most important indigenous cultures in the Amazon.
-They preserve their traditions, language, and ancestral practices.
-Visitors can learn about their rituals, crafts,
-and their harmonious relationship with nature.
-It is a meaningful cultural experience.
-</p>
-</div>
-
-<div class="card">
-<img src="images/Cultura_Yagua.jpg" alt="Cultura indígena Yagua">
-<h4>Yagua Culture</h4>
-
-<p class="lang-es">
-La cultura Yagua se caracteriza por su vestimenta tradicional elaborada con fibras naturales
-y su profundo conocimiento de la selva amazónica.
-Los visitantes pueden conocer sus costumbres, técnicas de caza y pesca,
-y su relación espiritual con la naturaleza.
-Esta cultura ha preservado sus tradiciones a lo largo del tiempo,
-representando un patrimonio cultural invaluable de la región.
-</p>
-
-<p class="lang-en">
-Yagua culture is characterized by its traditional clothing made from natural fibers
-and its deep knowledge of the Amazon rainforest.
-Visitors can learn about their customs, hunting and fishing techniques,
-and their spiritual connection with nature.
-This culture has preserved its traditions over time,
-representing an invaluable cultural heritage of the region.
-</p>
-</div>
-
-<div class="card">
-<img src="images/Tradiciones_Huitoto.jpg" alt="Tradiciones del pueblo Huitoto">
-<h4>Huitoto Traditions</h4>
-
-<p class="lang-es">
-Los Huitoto son un pueblo indígena que conserva rituales ancestrales,
-mitos y prácticas espirituales profundamente conectadas con la selva.
-Su cultura se basa en el respeto por la naturaleza y el equilibrio con el entorno.
-Los visitantes pueden aprender sobre sus ceremonias tradicionales
-y su visión del mundo.
-</p>
-
-<p class="lang-en">
-The Huitoto people preserve ancestral rituals,
-myths, and spiritual practices deeply connected to the rainforest.
-Their culture is based on respect for nature and environmental balance.
-Visitors can learn about their ceremonies
-and worldview.
-</p>
-</div>
+<h2 data-i18n="mapa">
+Mapa
+</h2>
 
 </div>
 
-<h3><span class="lang-es">Historia y Museos</span><span class="lang-en">Museums & History</span></h3>
+<div class="map-container">
 
-<div class="grid">
-
-<div class="card">
-<img src="images/Parque_Santander.jpg" alt="Parque Santander con loros">
-<h4>Santander Park</h4>
-
-<p class="lang-es">
-El Parque Santander es uno de los lugares más emblemáticos de Leticia,
-conocido por la llegada masiva de loros al atardecer.
-Este espectáculo natural atrae a turistas y locales,
-siendo un símbolo de la biodiversidad urbana.
-</p>
-
-<p class="lang-en">
-Santander Park is one of the most iconic places in Leticia,
-famous for the arrival of thousands of parrots at sunset.
-This natural spectacle attracts visitors
-and represents urban biodiversity.
-</p>
-</div>
-
-<div class="card">
-<img src="images/Museo_Etnográfico.jpg" alt="Museo etnográfico del Amazonas">
-<h4>Ethnographic Museum</h4>
-
-<p class="lang-es">
-El museo etnográfico permite conocer la historia cultural del Amazonas,
-incluyendo objetos, tradiciones y conocimientos indígenas.
-Es un espacio educativo fundamental
-para comprender la diversidad cultural de la región.
-</p>
-
-<p class="lang-en">
-The ethnographic museum showcases Amazon cultural history,
-including artifacts, traditions, and indigenous knowledge.
-It is an important educational space
-to understand regional diversity.
-</p>
-</div>
-
-<div class="card">
-<img src="images/Leticia_Malecón.jpg" alt="Malecón turístico de Leticia">
-<h4>Leticia Malecón</h4>
-
-<p class="lang-es">
-El malecón de Leticia es un espacio turístico ideal para caminar,
-disfrutar del paisaje del río Amazonas
-y experimentar la vida local.
-Es perfecto para actividades recreativas y fotografía.
-</p>
-
-<p class="lang-en">
-Leticia’s riverside promenade is perfect for walking,
-enjoying river views,
-and experiencing local life.
-It is ideal for leisure and photography.
-</p>
-</div>
+<iframe
+src="https://www.google.com/maps?q=Leticia%20Amazonas&output=embed"
+loading="lazy"
+allowfullscreen>
+</iframe>
 
 </div>
 
 </section>
 
-<!-- GASTRONOMÍA -->
+<!-- ================= COMMENTS ================= -->
+<section class="section" id="comments">
 
-<section id="gastronomy">
+<div class="section-header">
 
-<h2><span class="lang-es">Gastronomía</span><span class="lang-en">Gastronomy</span></h2>
-
-<div class="grid">
-
-<div class="card">
-<img src="images/Pescado_Moquiado.jpg" alt="Plato típico pescado moqueado">
-<h4>Pescado Moqueado</h4>
-
-<p class="lang-es">
-El pescado moqueado es uno de los platos más representativos del Amazonas,
-preparado mediante técnicas tradicionales de ahumado.
-Su sabor único proviene del uso de hojas y madera natural.
-Este plato refleja la identidad cultural y gastronómica de la región.
-</p>
-
-<p class="lang-en">
-Moqueado fish is one of the most representative Amazonian dishes,
-prepared using traditional smoking techniques.
-Its unique flavor comes from natural leaves and wood.
-This dish reflects the cultural identity of the region.
-</p>
-</div>
-
-<div class="card">
-<img src="images/Casabe.jpg" alt="Pan tradicional casabe">
-<h4>Casabe</h4>
-
-<p class="lang-es">
-El casabe es un pan tradicional elaborado a partir de yuca,
-base alimenticia de muchas comunidades indígenas.
-Es un alimento nutritivo, crujiente y de larga duración,
-fundamental en la dieta amazónica.
-</p>
-
-<p class="lang-en">
-Casabe is a traditional bread made from cassava,
-a staple food for many indigenous communities.
-It is nutritious, crunchy, and long-lasting,
-essential in the Amazon diet.
-</p>
-</div>
-
-<div class="card">
-<img src="images/Amazon_Fruits.jpg.webp" alt="Frutas exóticas amazónicas">
-<h4>Amazon Fruits</h4>
-
-<p class="lang-es">
-Las frutas amazónicas son exóticas, coloridas y ricas en nutrientes.
-Entre ellas se encuentran el copoazú, arazá y camu camu,
-reconocidas por sus beneficios para la salud.
-Son una parte esencial de la cultura gastronómica local.
-</p>
-
-<p class="lang-en">
-Amazonian fruits are exotic, colorful, and rich in nutrients.
-Examples include copoazú, arazá, and camu camu,
-known for their health benefits.
-They are an essential part of local gastronomy.
-</p>
-</div>
+<h2 data-i18n="comments">
+Comentarios y Valoraciones
+</h2>
 
 </div>
 
-<h3><span class="lang-es">Restaurantes Locales</span><span class="lang-en">Local Restaurants</span></h3>
+<div class="comments-box">
 
-<div class="grid">
+<div class="stars">
 
-<div class="card">
-<img src="images/Tierras_Amazónicas.jpg" alt="Restaurante Tierras Amazónicas">
-<h4>Tierras Amazónicas</h4>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
 
-<p class="lang-es">
-Este restaurante ofrece una experiencia auténtica de la cocina amazónica,
-con ingredientes frescos y recetas tradicionales.
-Es ideal para conocer los sabores típicos de la región.
-</p>
-
-<p class="lang-en">
-This restaurant offers an authentic Amazon culinary experience,
-with fresh ingredients and traditional recipes.
-It is perfect to explore local flavors.
-</p>
 </div>
 
-<div class="card">
-<img src="images/El_Cielo_Amazónico.jpg" alt="Restaurante El Cielo Amazónico">
-<h4>El Cielo Amazónico</h4>
+<button id="likeBtn">
+❤ 245 Likes
+</button>
 
-<p class="lang-es">
-El Cielo Amazónico combina gastronomía local con presentaciones modernas,
-ofreciendo platos innovadores inspirados en la tradición.
-Es un lugar destacado para turistas.
-</p>
+<textarea
+data-i18n-placeholder="placeholder"
+placeholder="Escribe un comentario...">
+</textarea>
 
-<p class="lang-en">
-El Cielo Amazónico combines local cuisine with modern presentation,
-offering innovative dishes inspired by tradition.
-A must-visit place for tourists.
-</p>
-</div>
-
-<div class="card">
-<img src="images/Restaurante_con_vistas_al_río.jpg" alt="Restaurante con vista al río Amazonas">
-<h4>River View Dining</h4>
-
-<p class="lang-es">
-Los restaurantes con vista al río ofrecen una experiencia gastronómica única,
-acompañada de paisajes impresionantes del Amazonas.
-Perfectos para cenas románticas o familiares.
-</p>
-
-<p class="lang-en">
-River view restaurants provide a unique dining experience
-with stunning Amazon landscapes.
-Perfect for romantic or family dinners.
-</p>
-</div>
+<button class="publish-btn" data-i18n="publish">
+Publicar comentario
+</button>
 
 </div>
 
 </section>
 
-<!-- EVENTOS -->
-
-<section id="events">
-
-<h2><span class="lang-es">Eventos Comunitarios</span><span class="lang-en">Community Events</span></h2>
-
-<h3><span class="lang-es">Festivales Culturales</span><span class="lang-en">Cultural Festivals</span></h3>
-
-<div class="grid">
-
-<div class="card">
-<img src="images/Festival_de_Integración_de_Amazon.jpg" alt="Festival de Integración Amazónica">
-<h4>Amazon Integration Festival</h4>
-
-<p class="lang-es">
-El Festival de Integración Amazónica es uno de los eventos culturales más importantes de la región,
-ya que reúne a comunidades de diferentes países que comparten el territorio amazónico.
-Durante este festival se presentan muestras de música, danza, gastronomía y artesanías,
-permitiendo a los visitantes conocer la diversidad cultural del Amazonas.
-Además, fomenta el intercambio cultural y fortalece la identidad regional,
-atrayendo turistas nacionales e internacionales.
-</p>
-
-<p class="lang-en">
-The Amazon Integration Festival is one of the most important cultural events in the region,
-bringing together communities from different countries within the Amazon territory.
-During the festival, visitors can enjoy music, dance, gastronomy, and handicrafts,
-allowing them to experience the cultural diversity of the Amazon.
-It also promotes cultural exchange and strengthens regional identity,
-attracting both national and international tourists.
-</p>
-</div>
-
-<div class="card">
-<img src="images/Festival_de_Danza_Indígena.jpg" alt="Festival de danza indígena">
-<h4>Indigenous Dance Festival</h4>
-
-<p class="lang-es">
-El Festival de Danzas Indígenas es una celebración que destaca las expresiones artísticas
-de las comunidades originarias del Amazonas.
-A través de coreografías tradicionales, vestimentas típicas y música ancestral,
-se transmiten historias, creencias y valores culturales.
-Este evento permite preservar las tradiciones indígenas
-y generar un espacio de reconocimiento y respeto por la diversidad cultural.
-</p>
-
-<p class="lang-en">
-The Indigenous Dance Festival highlights the artistic expressions
-of Amazon indigenous communities.
-Through traditional dances, costumes, and ancestral music,
-it shares stories, beliefs, and cultural values.
-This event helps preserve indigenous traditions
-and promotes respect for cultural diversity.
-</p>
-</div>
-
-<div class="card">
-<img src="images/Artesania.jpg" alt="Feria de artesanías amazónicas">
-<h4>Handicraft Fair</h4>
-
-<p class="lang-es">
-La feria artesanal es un espacio donde los artesanos locales exhiben y comercializan
-productos elaborados a mano utilizando materiales naturales de la región.
-Entre estos se encuentran tejidos, collares, esculturas y objetos decorativos.
-Esta actividad no solo impulsa la economía local,
-sino que también permite conservar técnicas tradicionales transmitidas por generaciones.
-</p>
-
-<p class="lang-en">
-The handicraft fair is a space where local artisans display and sell
-handmade products using natural materials from the region.
-These include textiles, jewelry, sculptures, and decorative items.
-This activity supports the local economy
-and preserves traditional techniques passed down through generations.
-</p>
-</div>
-
-</div>
-
-<h3><span class="lang-es">Turismo Fronterizo</span><span class="lang-en">Cross-border Tourism</span></h3>
-
-<div class="grid">
-
-<div class="card">
-<img src="images/Puerto_Nariño.jpg" alt="Feria de artesanías amazónicas">
-<h4>Puerto Nariño</h4>
-
-<p class="lang-es">
-Puerto Nariño es un destino turístico ecológico ubicado cerca de Leticia,
-reconocido por su organización sostenible y la ausencia de vehículos motorizados.
-Este lugar ofrece una experiencia tranquila,
-rodeada de naturaleza, cultura y biodiversidad.
-Los visitantes pueden realizar caminatas, avistamiento de fauna
-y conocer comunidades locales comprometidas con el medio ambiente.
-</p>
-
-<p class="lang-en">
-Puerto Nariño is an eco-friendly tourist destination near Leticia,
-known for its sustainable organization and lack of motor vehicles.
-It offers a peaceful experience surrounded by nature and biodiversity.
-Visitors can enjoy walking tours, wildlife observation,
-and interaction with environmentally conscious communities.
-</p>
-</div>
-
-<div class="card">
-<img src="images/Tabatinga-Brasil.jpg" alt="Ciudad de Tabatinga Brasil">
-<h4>Tabatinga Brazil</h4>
-
-<p class="lang-es">
-Tabatinga es una ciudad brasileña ubicada en la frontera con Leticia,
-lo que permite a los turistas vivir una experiencia internacional sin grandes desplazamientos.
-Aquí se puede disfrutar de la gastronomía brasileña,
-explorar su comercio local y conocer otra perspectiva cultural del Amazonas.
-Es un punto clave del turismo fronterizo.
-</p>
-
-<p class="lang-en">
-Tabatinga is a Brazilian city located on the border with Leticia,
-allowing tourists to have an international experience easily.
-Visitors can enjoy Brazilian cuisine,
-explore local markets, and discover a different cultural perspective of the Amazon.
-It is a key destination for cross-border tourism.
-</p>
-</div>
-
-<div class="card">
-<img src="images/Ruta_fronteriza_de_Perú.jpg" alt="Ruta fluvial hacia Perú">
-<h4>Peru Border Route</h4>
-
-<p class="lang-es">
-Las rutas hacia Perú a través del río Amazonas permiten a los visitantes explorar
-otros territorios amazónicos y conocer nuevas culturas.
-Durante estos recorridos se pueden observar paisajes naturales,
-fauna silvestre y comunidades ribereñas.
-Es una experiencia enriquecedora que amplía la visión del Amazonas como región compartida.
-</p>
-
-<p class="lang-en">
-River routes to Peru allow visitors to explore other Amazon regions
-and discover new cultures.
-During these tours, travelers can see natural landscapes,
-wildlife, and riverside communities.
-It is an enriching experience that highlights the Amazon as a shared region.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- MAPA -->
-
-<section id="map">
-
-<h2><span class="lang-es">Mapa Turístico</span><span class="lang-en">Tourist Map</span></h2>
-
-<iframe src="https://www.google.com/maps?q=Leticia%20Amazonas&output=embed"
-width="100%" height="400"></iframe>
-
-</section>
-
+<!-- ================= FOOTER ================= -->
 <footer>
-<p>Multimedia Applications Course – UNAD</p>
-<p>Student: Roynher Alberto Montero Muñoz</p>
+
+<div class="footer-content">
+
+<h3>Roynher Alberto Montero Muñoz</h3>
+
+<p>Ingeniero Multimedia</p>
+
+<p>3018962878</p>
+
+<p>monteroroynheralberto@gmail.com</p>
+
+</div>
+
 </footer>
 
 <script src="script.js"></script>
